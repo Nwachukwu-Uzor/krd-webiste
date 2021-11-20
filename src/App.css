@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Oswald:wght@300;500;700&display=swap");
+
+:root {
+  /* --primary-color: #1c7947;
+   */
+  --primary-color: #008158;
+  /* --secondary-color: #0076aa; */
+  /* --secondary-color: #b7423b; */
+  --secondary-color: #f58634;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 300;
+  font-size: 14px;
+  background-color: #f1f1f1;
+}
+
+.container {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+p {
+  margin: 20px 0;
+}
+
+h1,
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 1.35rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+}
+
+p {
+  font-size: 0.95rem;
+  line-height: 2;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (min-width: 768px) {
+  .flex {
+    flex-direction: row;
   }
 }

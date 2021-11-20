@@ -1,0 +1,12 @@
+.pageHeader {
+  min-height: 35vh;
+  background-image: url("../../assets/images/office-bg.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageHeader h1 {
+  color: #fff;
+  text-transform: uppercase;
+}

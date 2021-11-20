@@ -1,0 +1,33 @@
+.pageHeader {
+  background-image: url("../../assets/images/office-bg.jpg");
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  color: #fff;
+  padding: 20px;
+}
+
+.pageHeader h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .pageHeader h1 {
+    font-size: 3rem;
+  }
+}
+
+.Blog__Grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .Blog__Grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

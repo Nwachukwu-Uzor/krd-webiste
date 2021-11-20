@@ -1,0 +1,9 @@
+.Contacts__Grid {
+  padding: 2em 0;
+}
+
+.Contacts iframe {
+  width: 100%;
+  margin-top: 20px;
+  height: 80vh;
+}

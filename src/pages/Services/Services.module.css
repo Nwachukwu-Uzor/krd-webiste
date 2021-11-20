@@ -1,0 +1,39 @@
+.services__header {
+  text-align: center;
+  margin: 20px auto;
+  text-transform: uppercase;
+}
+
+.service__office {
+  width: 100%;
+}
+
+.service__detail {
+  margin: 40px auto;
+}
+
+.service__detail h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.service__detail__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+  align-items: flex-start;
+  grid-gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .service__detail__grid {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.service__detail__grid img {
+  height: 400px;
+  width: 100%;
+  object-fit: center;
+  display: block;
+}
