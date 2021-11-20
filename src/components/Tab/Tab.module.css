@@ -1,15 +1,8 @@
 .about__statement h2 {
   text-align: center;
-  /* font-size: 1.75em; */
   text-transform: capitalize;
   margin: 60px 0 10px 0;
 }
-
-/* @media (min-width: 768px) {
-    .about__statement h2 {
-      font-size: 2.5rem;
-    }
-  } */
 
 .about__statement__grid {
   display: grid;
@@ -24,6 +17,11 @@
   .about__statement__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.active_tab_style {
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 .about__statement__grid img {

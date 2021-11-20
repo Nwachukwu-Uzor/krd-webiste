@@ -65,19 +65,34 @@
 
 .service {
   text-align: center;
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: flex-start;
+  grid-gap: 20px;
   box-shadow: 1px 1px 1px 2px #ebebeb;
   border-radius: 10px;
   padding: 20px 5px;
   background-color: #fff;
 }
 
+.service h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0;
+}
+
 .service i {
   font-size: 2rem;
-  color: var(--secondary-color);
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
   padding: 20px;
-  border: 6px var(--secondary-color) double;
-  border-radius: 50px;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+
+.service i:hover {
+  background-color: var(--dark-green);
 }
 
 .text__center {

@@ -12,6 +12,25 @@ import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 
+const ServiceCard = (props) => {
+  return (
+    <div className={props.className}>
+      <i className={props.icon}></i>
+      <h2>{props.title}</h2>
+    </div>
+  );
+};
+
+const services = [
+  { service: "Loan and Finance", icon: "fas fa-money-bill-wave" },
+  { service: "Real Estate", icon: "fas fa-home" },
+  { service: "Outsourcing", icon: "fas fa-people-carry" },
+  { service: "Head Hunting", icon: "fas fa-people-arrows" },
+  { service: "Corporate Recruitment", icon: "fas fa-users" },
+  { service: "Multichoice Retailer", icon: "fas fa-tv" },
+  { service: "Training and Development", icon: "fas fa-chalkboard-teacher" },
+];
+
 export default function Home() {
   useEffect(() => {
     const wow = new WOW.WOW();
@@ -19,15 +38,6 @@ export default function Home() {
   }, []);
 
   const { recents } = useContext(blogContext);
-
-  const ServiceCard = (props) => {
-    return (
-      <div className={props.className}>
-        <i className="fas fa-adjust"></i>
-        <h2>{props.title}</h2>
-      </div>
-    );
-  };
 
   return (
     <div>
@@ -100,34 +110,14 @@ export default function Home() {
         <div className={`${styles.services} container`}>
           <h1>Our Services</h1>
           <div className={styles.services__grid}>
-            <div
-              className={`${styles.service} wow animate__animated animate__zoomIn`}
-            >
-              <i className="fas fa-adjust"></i>
-              <h2>Finance House</h2>
-            </div>
-            <div
-              className={`${styles.service} wow animate__animated animate__zoomIn`}
-            >
-              <i className="fas fa-adjust"></i>
-              <h2>Real Estate</h2>
-            </div>
-            <div
-              className={`${styles.service} wow animate__animated animate__zoomIn`}
-            >
-              <i className="fas fa-adjust"></i>
-              <h2>Human Resource</h2>
-            </div>
-            <div
-              className={`${styles.service} wow animate__animated animate__zoomIn`}
-            >
-              <i className="fas fa-adjust"></i>
-              <h2>MultiChoice Branded Store Dealers</h2>
-            </div>
-            <ServiceCard
-              title="messing around"
-              className={`${styles.service} wow animate__animated animate__zoomIn`}
-            />
+            {services.map((service) => (
+              <ServiceCard
+                key={service.service}
+                title={service.service}
+                icon={service.icon}
+                className={`${styles.service} wow animate__animated animate__zoomIn`}
+              />
+            ))}
           </div>
         </div>
       </div>
