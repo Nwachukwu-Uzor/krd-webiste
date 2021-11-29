@@ -26,32 +26,58 @@ export default function Header() {
           </div>
         </div>
         <div className={`${styles.navlink__container} ${click && styles.open}`}>
-          <NavLink to="/" className={styles.nav__item} onClick={close}>
+          <NavLink
+            to="/"
+            exact
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.nav__item} ${styles.active}`
+                : styles.nav__item
+            }
+            onClick={close}
+          >
             Home
           </NavLink>
           <NavLink
             to="/about"
-            activeClassName={styles.active}
-            className={styles.nav__item}
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.nav__item} ${styles.active}`
+                : styles.nav__item
+            }
             onClick={close}
           >
             About
           </NavLink>
           <NavLink
             to="/services"
-            activeClassName={styles.active}
-            className={styles.nav__item}
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.nav__item} ${styles.active}`
+                : styles.nav__item
+            }
             onClick={close}
           >
             Services
           </NavLink>
-          <NavLink to="/contacts" className={styles.nav__item} onClick={close}>
+          <NavLink
+            to="/contacts"
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.nav__item} ${styles.active}`
+                : styles.nav__item
+            }
+            onClick={close}
+          >
             Contact
           </NavLink>
           <NavLink
             to="/blog"
-            className={styles.nav__item}
-            activeClassName={styles.active}
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.nav__item} ${styles.active}`
+                : styles.nav__item
+            }
             onClick={close}
           >
             Blog

@@ -41,11 +41,14 @@ export default function Services() {
             <img src={realEstate} alt="real estate services" />
             <div className={styles.service__detail}>
               <p>
-                KR&D Consulting Ltd gives loan offers to business owners, salary
-                earners, etc. Our interest rate is highly competitive and
-                flexible. Our clients can access up to #10,000,000.00 (Ten
-                Million Naira) on flexible payment duration. All loans are
-                collateral tied or backed by a verifiable guarantor.
+                KR&D Court is one of the leading Real Estate service providers
+                in Lagos located beside the prestigious Lagos Business School
+                (LBS). At KR&D, we have exotic apartments for sale, short-let,
+                renting(service apartments), heavily discounted to accommodate
+                all, and sundry.
+                <br />
+                All apartments are furnished with modern furniture, modern
+                kitchen equipment, and Jacuzzi baths with water heaters.
               </p>
             </div>
           </div>
