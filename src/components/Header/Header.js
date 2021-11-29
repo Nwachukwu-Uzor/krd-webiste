@@ -26,13 +26,7 @@ export default function Header() {
           </div>
         </div>
         <div className={`${styles.navlink__container} ${click && styles.open}`}>
-          <NavLink
-            to="/"
-            activeClassName={styles.active}
-            className={styles.nav__item}
-            exact
-            onClick={close}
-          >
+          <NavLink to="/" className={styles.nav__item} onClick={close}>
             Home
           </NavLink>
           <NavLink

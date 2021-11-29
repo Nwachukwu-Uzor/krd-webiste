@@ -21,7 +21,7 @@ export default function BlogCard({ post }) {
           </div>
           <div className={styles.button__div}>
             <Link
-              to={`blog/${post.slug.current}`}
+              to={`${post.slug.current}`}
               style={{ textDecoration: "none", color: "inherit" }}
             >
               <Button variant="outlined" color="secondary">

@@ -7,6 +7,7 @@ import finances from "../../assets/images/finances.jpg";
 import realEstate from "../../assets/images/estate-image.jpeg";
 import multiChoice from "../../assets/images/multichoice.jpg";
 import humanResources from "../../assets/images/human-resources.jpg";
+import training from "../../assets/images/training_krd.jpg";
 
 export default function Services() {
   return (
@@ -91,6 +92,53 @@ export default function Services() {
                 <br />
                 <strong>-</strong> HR data and analytics.
                 <br />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.service__detail}>
+          <h2>Training and Development </h2>
+          <div className={styles.service__detail__grid}>
+            <img src={training} alt="human resources" />
+            <div className={styles.service__detail__text}>
+              <p>
+                <strong>Structural Learning Programme</strong>
+                <br />
+                To stand pout in todays highly competitive market , most
+                businesses must undertake as a priority to re-evaluate their
+                manpower needs. This can be done through training analysis and
+                retraining to achieve high performance and attain corporal goals
+                , continuous improved processing for sustainable growth and
+                profitability.
+              </p>
+              <p>
+                <strong>
+                  Corporate restructuring and strategic realignment
+                </strong>
+                <br />
+                We offer to act as a change agent by facilitating the
+                restructuring and realignment of the corporate structure of most
+                Organizations when our services are sought. We do in depth
+                reorganization of processes , deliver procedure manuals and come
+                up with the ideal corporate structure for stunted organizations.
+                On retainership we facilitate implementation of our
+                recommendations in policy and structures that bring about high
+                performance in most organizations.
+              </p>
+              <p>
+                <strong>
+                  Leadership and Performance enhancement training.
+                </strong>
+                <br />
+                We at KR&D consulting run leadership and performance enhancement
+                training , Overseas in partnership with notable business Schools
+                in the United Kingdom , US A and South Africa. The Objective is
+                to equip middle and top level management professionals to give
+                strong leadership and give direction to their various
+                Organizations , which is a competitive and hazardous Business
+                environment . We Also Organize strategic Seminars and retreats
+                for our valuable clients. These courses are easily accessible at
+                our publications in prominent media channels.
               </p>
             </div>
           </div>

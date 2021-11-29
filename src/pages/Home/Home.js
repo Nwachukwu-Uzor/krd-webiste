@@ -11,6 +11,7 @@ import Meta from "../../components/Meta/Meta";
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
+import SectionDivider from "./../../UI/SectionDivider/SectionDivider";
 
 const ServiceCard = (props) => {
   return (
@@ -106,6 +107,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <SectionDivider />
       <div className={styles.services__container}>
         <div className={`${styles.services} container`}>
           <h1>Our Services</h1>
@@ -121,10 +123,12 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <SectionDivider />
       <div className="container">
         <h1 className={styles.text__center}>INFO</h1>
         <FullWidthTabs />
       </div>
+      <SectionDivider />
       <div className="container">
         <h1 className={styles.text__center}>POSTS</h1>
         {recents.map((recent) => (
