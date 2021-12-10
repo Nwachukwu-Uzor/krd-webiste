@@ -44,7 +44,7 @@ export default function Home() {
     <div>
       <div className={styles.hero__container}>
         <Meta
-          title="KRD Consulting || Lorem ipsum dolor sit amet."
+          title="KRD Consulting || Business Solutions"
           description="First class consultancy service"
         />
         <div className={`${styles.hero} flex container`}>

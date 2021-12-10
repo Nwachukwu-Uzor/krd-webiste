@@ -14,7 +14,7 @@ export default function Blog() {
   const { posts, loading } = useContext(blogContext);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage, setPostPerPage] = useState(2);
+  const [postPerPage] = useState(20);
 
   const indexOfLastPost = currentPage * postPerPage;
 
