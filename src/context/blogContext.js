@@ -5,6 +5,7 @@ import Client from "../Client";
 const blogContext = createContext({
   posts: [],
   recents: [],
+  loading: false,
 });
 
 export default blogContext;
@@ -12,8 +13,10 @@ export default blogContext;
 export const BlogContextProvider = (props) => {
   const [posts, setPosts] = useState([]);
   const [recents, setRecents] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     Client.fetch(
       `*[_type == "post"] {
         title,
@@ -45,12 +48,18 @@ export const BlogContextProvider = (props) => {
         } else {
           setRecents(data);
         }
+        setLoading(false);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
   }, []);
 
   return (
-    <blogContext.Provider value={{ posts: posts, recents: recents }}>
+    <blogContext.Provider
+      value={{ posts: posts, recents: recents, loading: loading }}
+    >
       {props.children}
     </blogContext.Provider>
   );

@@ -56,16 +56,18 @@ export default function Home() {
               We Make Your <span>Business Growth</span> Our Priority
             </h1>
             <p>
-              Get the Best Outsourcing (Recruitment), Head Hunting, Training and
-              Development, Company Restructuring and Strategic Realignment
-              Service For Your Business.
+              KR&D Consulting Ltd gives loan offers to business owners, salary
+              earners, etc. Our interest rate is highly competitive and
+              flexible. Our clients can access up to #10,000,000.00 (Ten Million
+              Naira) on flexible payment duration. All loans are collateral tied
+              or backed by a verifiable guarantor.
             </p>
             <button className={styles.learn__more}>Learn More</button>
           </div>
           <img
-            src={hero}
-            alt="services"
-            className={`${styles.hero__image} wow animate__animated animate__backInRight`}
+          // src={hero}
+          // alt="services"
+          // className={`${styles.hero__image} wow animate__animated animate__backInRight`}
           />
         </div>
       </div>
