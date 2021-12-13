@@ -3,7 +3,7 @@
   background-image: linear-gradient(rgba(146, 251, 206, 0.5), rgba(108, 248, 187, 0.7)), url(../../assets/images/money.jpg);
   background-repeat: no-repeat;
   position: relative;
-  height: 80vh;
+  height: calc(100vh - 90px);
   display: flex;
   align-items: center;
   justify-content: center;

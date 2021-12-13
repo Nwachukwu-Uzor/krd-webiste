@@ -65,13 +65,13 @@ export default function Home(props) {
           </div>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="rgb(17, 153, 94)"
           fill-opacity="0.6"
           d="M0,288L60,288C120,288,240,288,360,256C480,224,600,160,720,144C840,128,960,160,1080,170.7C1200,181,1320,171,1380,165.3L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
         ></path>
-      </svg>
+      </svg> */}
       <div className="about__us__container">
         <div className={`${styles.about__us} container`}>
           <h1>About Us</h1>
