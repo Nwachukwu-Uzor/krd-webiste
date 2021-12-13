@@ -62,7 +62,7 @@ export default function Contacts() {
               <h2>We're Open</h2>
               <p>Mondays to Friday 8:00am to 5:00pm</p>
               <h2>Phone</h2>
-              <p>+2340000000000</p>
+              <p>+234-705-557-020-1</p>
             </Grid>
           </Grid>
         </form>

@@ -10,24 +10,34 @@ import Services from "./pages/Services/Services";
 import About from "./pages/About/About";
 import SinglePost from "./pages/Blog/SinglePost/SinglePost";
 import NotFound from "./pages/NotFound/NotFound";
+import Preloader from './UI/Preloader/Preloader';
 import ScrollTop from "./ScrollTop";
+import { useContext } from "react";
+import blogContext from './context/blogContext'
 
 function App() {
+  const { preLoading } = useContext(blogContext)
+
   return (
-    <div className="App">
-      <ScrollTop />
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contacts" element={<Contacts />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<SinglePost />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer />
-    </div>
+    preLoading ?
+      <Preloader />
+      :
+      (
+        <div className="App">
+          <ScrollTop />
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<SinglePost />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <Footer />
+        </div>
+      )
   );
 }
 

@@ -69,3 +69,8 @@
 .About__Frequently__Asked {
   text-align: center;
 }
+
+.accordion__title {
+  font-weight: 600;
+  text-transform: uppercase;
+}

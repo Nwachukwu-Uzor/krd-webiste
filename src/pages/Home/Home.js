@@ -3,7 +3,6 @@ import blogContext from "../../context/blogContext";
 
 import WOW from "wowjs";
 
-import hero from "../../assets/images/hero.png";
 import FullWidthTabs from "../../components/Tab/Tab";
 import BlogLink from "./BlogLink/BlogLink";
 import Meta from "../../components/Meta/Meta";
@@ -12,6 +11,8 @@ import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import SectionDivider from "./../../UI/SectionDivider/SectionDivider";
+
+import aboutImage from '../../assets/images/office-bg.jpg';
 
 const ServiceCard = (props) => {
   return (
@@ -25,28 +26,26 @@ const ServiceCard = (props) => {
 const services = [
   { service: "Loan and Finance", icon: "fas fa-money-bill-wave" },
   { service: "Real Estate", icon: "fas fa-home" },
-  { service: "Outsourcing", icon: "fas fa-people-carry" },
-  { service: "Head Hunting", icon: "fas fa-people-arrows" },
-  { service: "Corporate Recruitment", icon: "fas fa-users" },
+  { service: "HR Services", icon: "fas fa-people-carry" },
   { service: "Multichoice Retailer", icon: "fas fa-tv" },
-  { service: "Training and Development", icon: "fas fa-chalkboard-teacher" },
 ];
 
-export default function Home() {
+export default function Home(props) {
+  const { recents, preLoading, setPreLoading } = useContext(blogContext);
+
   useEffect(() => {
     const wow = new WOW.WOW();
-    wow.init();
+    wow.init();   
+    const timer = setTimeout(() => setPreLoading(false), 2000);
   }, []);
-
-  const { recents } = useContext(blogContext);
-
+  
   return (
     <div>
+      <Meta
+        title="KRD Consulting || Business Solutions"
+        description="First class consultancy service"
+      />
       <div className={styles.hero__container}>
-        <Meta
-          title="KRD Consulting || Business Solutions"
-          description="First class consultancy service"
-        />
         <div className={`${styles.hero} flex container`}>
           <div
             className={`${styles.hero__text} wow animate__animated animate__backInLeft `}
@@ -64,17 +63,12 @@ export default function Home() {
             </p>
             <button className={styles.learn__more}>Learn More</button>
           </div>
-          <img
-          // src={hero}
-          // alt="services"
-          // className={`${styles.hero__image} wow animate__animated animate__backInRight`}
-          />
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#4FB78A"
-          fill-opacity="1"
+          fill="rgb(17, 153, 94)"
+          fill-opacity="0.6"
           d="M0,288L60,288C120,288,240,288,360,256C480,224,600,160,720,144C840,128,960,160,1080,170.7C1200,181,1320,171,1380,165.3L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
         ></path>
       </svg>
@@ -83,7 +77,7 @@ export default function Home() {
           <h1>About Us</h1>
           <div className="flex">
             <img
-              src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1974&q=80"
+              src={aboutImage}
               alt="about krd consulting"
               className="wow animate__animated animate__fadeInLeftBig"
             />

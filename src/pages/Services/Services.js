@@ -3,7 +3,7 @@ import Meta from "../../components/Meta/Meta";
 
 import styles from "./Services.module.css";
 
-import finances from "../../assets/images/finances.jpg";
+import finances from "../../assets/images/kr&d_loan.jpeg";
 import realEstate from "../../assets/images/estate-image.jpeg";
 import multiChoice from "../../assets/images/multichoice.jpg";
 import humanResources from "../../assets/images/human-resources.jpg";

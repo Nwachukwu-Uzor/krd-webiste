@@ -117,9 +117,9 @@ export default function About() {
             className="wow animate__animated animate__backInLeft"
           />
           <p className="wow animate__animated animate__backInRight">
-            <strong>Mr Prince Dimkpa PhD</strong> <br />
+            <strong>Dr. Prince Dimkpa (PhD)</strong> <br />
             <strong>Chief Executive Officer </strong> <br />
-            Mr Prince Dimkpa serves as the chief executive officer of KR&D
+            Dr. Prince Dimkpa serves as the chief executive officer of KR&D
             consulting. He was until recently the zonal business coordinator of
             Globacom Limited <br />
             He has over 25 years of post-graduate experience spanning Academia,
@@ -143,9 +143,9 @@ export default function About() {
             className="wow animate__animated animate__backInLeft"
           />
           <p className="wow animate__animated animate__backInRight">
-            <strong>Mr Opara Ikechukwu Uche</strong> <br />
+            <strong>Opara Ikechukwu Uche</strong> <br />
             <strong>General Manager Operations </strong> <br />
-            Mr Opara Ikechukwu Uche serves as the General Manager Operations in
+            Opara Ikechukwu Uche serves as the General Manager Operations in
             KR&D Consulting Ltd. He is a Dynamic and Effective Management
             Professional with over 15yrs in Financial Sector. <br />
             He previously worked in FCMB as a Business Development Officer later
@@ -166,7 +166,7 @@ export default function About() {
       <div className="container">
         <Divider sx={{ marginBottom: "20px" }} />
       </div>
-      <AccordionItem />
+      <AccordionItem title={styles.accordion__title}/>
     </div>
   );
 }

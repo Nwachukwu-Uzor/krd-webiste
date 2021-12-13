@@ -5,7 +5,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-export default function AccordionItem() {
+export default function AccordionItem(props) {
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -23,12 +23,11 @@ export default function AccordionItem() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Accordion 1</Typography>
+          <Typography className={props.title}>What is the interest rate ?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Relative and competitive ranging from  5% to 10% depending on the Amount requested. The higher the amount d lower the interest and the lower the amount the higher the interest rates.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -41,12 +40,11 @@ export default function AccordionItem() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Accordion 2</Typography>
+          <Typography className={props.title}>Can one repay loan in installments?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Yes instalment payment is acceptable
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -59,8 +57,30 @@ export default function AccordionItem() {
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography>Disabled Accordion</Typography>
+          <Typography className={props.title}>Can loan be collected without a collateral?</Typography>
         </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            All loans are collateral backed but in some cases verifiable guarantor are accepteds
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion
+        expanded={expanded === "panel4"}
+        onChange={handleChange("panel4")}
+      >
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel4a-content"
+          id="panel4a-header"
+        >
+          <Typography className={props.title}>What is the time frame to repay loan ?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Maximum duration is 90 days.
+          </Typography>
+        </AccordionDetails>
       </Accordion>
     </div>
   );

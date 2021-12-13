@@ -1,4 +1,6 @@
-const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
+import styles from './Pagination.module.css';
+
+const Pagination = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
@@ -6,13 +8,13 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   }
 
   return (
-    <nav>
-      <ul className="pagination">
+  <nav>
+      <ul className={styles.pagination}>
         {pageNumbers.map((number) => (
           <li key={number} className="page-item">
-            <a onClick={() => paginate(number)} className="page-link" href="#!">
+            <p onClick={() => paginate(number)} className={`${styles.pagination__link} ${number === currentPage && styles.active}`}>
               {number}
-            </a>
+            </p>
           </li>
         ))}
       </ul>
